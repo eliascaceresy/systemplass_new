@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/argerim/select2-rails.git
+  revision: 75a69f6c49bbbbddd6b6e93e857ce587a06b498e
+  specs:
+    select2-rails (4.0.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -170,6 +176,9 @@ GEM
     selenium-webdriver (3.11.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    simple_form (3.5.1)
+      actionpack (> 4, < 5.2)
+      activemodel (> 4, < 5.2)
     slim (3.0.9)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 1.3.3, < 2.1)
@@ -230,7 +239,9 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.5)
   sass-rails (~> 5.0)
+  select2-rails!
   selenium-webdriver
+  simple_form
   slim
   spring
   spring-watcher-listen (~> 2.0.0)

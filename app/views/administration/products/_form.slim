@@ -1,0 +1,52 @@
+.container-fluid.mt-2
+  = simple_form_for([:administration,@product],html: { class: 'form-horizontal' }, wrapper: :horizontal_form) do |f|
+    .panel.panel-default
+      .panel-heading.css-treeview
+        h4=fa_icon "shopping-cart",text:"Producto"
+      .panel-body
+        .row
+          .col-md-6.col-xs-12
+            = f.input :name,label: "Nombre"
+          .col-md-6.col-xs-12
+            = f.input :price,label: "Precio ($)"
+        .row.mb-1em
+          .col-md-6.col-xs-12
+            row.mb-1em
+              .col-md-3
+                |* Categoría
+              .col-md-9
+                = f.collection_select :category_id, Category.order(:name), :id, :name, :prompt => "-- Seleccione una Categoría --"
+          .col-md-6.col-xs-12#row_subcategory
+            row.mb-1em
+              .col-md-3
+                |* Subategoría
+              .col-md-9
+                = f.grouped_collection_select :subcategory_id, Category.order(:name), :subcategories, :name, :id, :name, :prompt => "-- Seleccione una Subcategoría --"
+        .row
+          .col-md-6.col-xs-12
+              = f.input :weight,label: "Peso (Kg)"
+          .col-md-6.col-xs-12
+            = f.input :dimensions,label: "Dimensiones (Mts.)"
+        .row
+          .col-md-6.col-xs-12
+            = f.input :capacity,label: "Capacidad (Lts.)"
+          .col-md-6.col-xs-12
+            = f.input :description,label: "Descripcion"
+
+        .mb-1em
+          =link_to_add_association f, :pictures, class: 'add-association btn btn-success btn-sm', id: 'boton_add_picture', data: {"association-insertion-node" => "div.pictures", "association-insertion-method" => "append"} do
+            = fa_icon 'plus', text: "Agregar Imagen"
+        .row
+          .col-md-1
+          .col-md-6
+            div.pictures.mt-3.ml-5#nested_pictures
+              =f.simple_fields_for :pictures do |f|
+                =render 'picture_fields', f: f
+
+      .panel-footer
+        = button_tag(type: 'submit',class: "btn btn-success mr-1") do
+          = fa_icon 'save', text: "Guardar"
+        = link_to administration_products_path, class: 'btn btn-danger' do
+          = fa_icon 'remove', text: "Cancelar"
+          script
+            | $("#product_category_id").select2({ language: 'es', width: '100%' }); $("#product_subcategory_id").select2({ language: 'es', width: '100%' });

@@ -44,6 +44,10 @@ ActiveRecord::Schema.define(version: 20180325035858) do
     t.string "featured_product"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "category_id"
+    t.bigint "subcategory_id"
+    t.index ["category_id"], name: "index_products_on_category_id"
+    t.index ["subcategory_id"], name: "index_products_on_subcategory_id"
   end
 
   create_table "subcategories", force: :cascade do |t|
@@ -73,5 +77,7 @@ ActiveRecord::Schema.define(version: 20180325035858) do
   end
 
   add_foreign_key "pictures", "products"
+  add_foreign_key "products", "categories"
+  add_foreign_key "products", "subcategories"
   add_foreign_key "subcategories", "categories"
 end

@@ -1,0 +1,33 @@
+.container-fluid.mt-2
+  .row
+    .col-md-12.col-lg-12
+      .panel.panel-default
+        .panel-heading.css-treeview
+          h4=fa_icon "sitemap",text:"Listado de Categorías y Sub-categorías"
+        .panel-body
+          .table-responisve
+            table.table.table-hover
+              thead
+                tr
+                  th #
+                  th Nombre
+                  th Subcategorías
+                  th Acciones
+              tbody
+                -@categories.each_with_index do |category,index|
+                  tr
+                    td= index+1
+                    td= category.name
+                    td
+                      table.table.table-sm
+                        tbody
+                          -category.subcategories.each_with_index do |sc,index|
+                            tr
+                              td= index+1
+                              td= sc.name
+                    td
+                      = link_to edit_administration_category_path(category),class:"btn btn-sm btn-warning" do
+                        = fa_icon "pencil",text:"Editar"
+        .panel-footer
+          = link_to new_administration_category_path,class:"btn btn-success" do
+            =fa_icon "plus",text:"Nueva Categoría"

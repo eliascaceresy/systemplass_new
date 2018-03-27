@@ -1,0 +1,35 @@
+<div class="panel panel-default">
+  <div class="panel-heading css-treeview">
+    <h4><%=fa_icon "shopping-cart", text: "Productos"%></h4>
+  </div>
+</div>
+<%=link_to new_administration_product_path,class:"btn btn-success" do%>
+<%=fa_icon "plus", text: "Nuevo Producto"%>
+<%end%>
+<%@products.each do |product|%>
+  <div class="container-fluid">
+    <div class="col-md-3 product-men">
+      <div class="men-pro-item simpleCart_shelfItem">
+        <div class="men-thumb-item">
+          <%=image_tag(product.pictures.first.picture_file.url(:medium),class:"pro-image-front")%>
+          <%=image_tag(product.pictures.first.picture_file.url(:medium),class:"pro-image-back")%>
+          <div class="men-cart-pro">
+            <div class="inner-men-cart-pro">
+              <%=link_to "DETALLES", administration_product_path(product),class:"link-product-add-cart"%>
+            </div>
+          </div>
+          <span class="product-new-top">New</span>
+        </div>
+        <div class="item-info-product ">
+          <h4>
+            <%=link_to product.name,administration_product_path(product)%>
+          </h4>
+          <div class="info-product-price">
+            <span class="item_price">$<%=product.price%></span>
+            <!--<del>$69.71</del>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<%end%>

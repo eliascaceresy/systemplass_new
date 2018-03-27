@@ -14,3 +14,14 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require_self
+//= require select2-full
+//= require select2_locale_es
+//= require cocoon
+
+// Alert Desaparece despues de un tiempo
+$(document).ready(function() {
+  $(".alert").delay(5000).slideUp(200, function() {
+    $(this).alert('close');
+  });
+});

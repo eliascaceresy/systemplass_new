@@ -1,0 +1,20 @@
+.container-fluid.mt-2
+  = simple_form_for([:administration,@category],html: { class: 'form-horizontal' }, wrapper: :horizontal_form) do |f|
+    .panel.panel-default
+      .panel-heading.css-treeview
+        h4=fa_icon "sitemap",text:"Categoría"
+      .panel-body
+        = f.input :name,label: "Nombre"
+        =link_to_add_association f, :subcategories, class: 'add-association btn btn-success btn-sm', id: 'boton_add_subcategory', data: {"association-insertion-node" => "div.subcategories", "association-insertion-method" => "append"} do
+          = fa_icon 'plus', text: "Agregar Subcategoría"
+        .row
+          .col-md-1
+          .col-md-6
+            div.subcategories.mt-1em#nested_subcategories
+              =f.simple_fields_for :subcategories do |f|
+                =render 'subcategory_fields', f: f
+      .panel-footer
+        = button_tag(type: 'submit',class: "btn btn-success mr-1") do
+          = fa_icon 'save', text: "Guardar"
+        = link_to administration_categories_path, class: 'btn btn-danger' do
+          = fa_icon 'remove', text: "Cancelar"

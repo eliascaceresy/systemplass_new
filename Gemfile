@@ -41,6 +41,8 @@ gem "cocoon"
 gem "paperclip", "~> 6.0.0"
 gem "annotate"
 gem 'jquery-rails'
+gem 'simple_form'
+gem 'select2-rails', github: 'argerim/select2-rails'
 #################
 
 group :development, :test do
