@@ -6,16 +6,23 @@
 #  name             :string
 #  description      :text
 #  price            :integer
-#  dimensions       :string
 #  weight           :string
 #  capacity         :string
 #  aasm_state       :string
-#  product_offer    :string
-#  featured_product :string
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #  category_id      :integer
 #  subcategory_id   :integer
+#  total_heigth     :integer
+#  total_large      :integer
+#  larger_diameter  :integer
+#  smaller_diameter :integer
+#  hatch_diameter   :integer
+#  applications     :text
+#  materials        :string
+#  total_width      :integer
+#  featured_product :boolean
+#  product_offer    :boolean
 #
 # Indexes
 #

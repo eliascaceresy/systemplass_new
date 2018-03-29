@@ -26,12 +26,29 @@
           .col-md-6.col-xs-12
               = f.input :weight,label: "Peso (Kg)"
           .col-md-6.col-xs-12
-            = f.input :dimensions,label: "Dimensiones (Mts.)"
+            = f.input :capacity,label: "Capacidad (Lts.)"
         .row
           .col-md-6.col-xs-12
-            = f.input :capacity,label: "Capacidad (Lts.)"
+              = f.input :total_heigth,label: "Altura Total"
+          .col-md-6.col-xs-12
+            = f.input :total_large,label: "Largo Total"
+        .row
+          .col-md-6.col-xs-12
+              = f.input :larger_diameter,label: "Diámetro Mayor"
+          .col-md-6.col-xs-12
+            = f.input :smaller_diameter,label: "Diámetro Menor"
+        .row
+          .col-md-6.col-xs-12
+              = f.input :hatch_diameter,label: "Diámetro Escotilla"
+        .row
+          .col-md-6.col-xs-12
+            = f.input :applications,label: "Aplicaciones"
           .col-md-6.col-xs-12
             = f.input :description,label: "Descripcion"
+        .row.text-center
+          .col-md-6.col-xs-12
+            = f.input :featured_product, as: :boolean, label: "Producto Destacado?"
+            = f.input :product_offer, as: :boolean, label: "Oferta?"
 
         .mb-1em
           =link_to_add_association f, :pictures, class: 'add-association btn btn-success btn-sm', id: 'boton_add_picture', data: {"association-insertion-node" => "div.pictures", "association-insertion-method" => "append"} do

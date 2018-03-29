@@ -6,16 +6,23 @@
 #  name             :string
 #  description      :text
 #  price            :integer
-#  dimensions       :string
 #  weight           :string
 #  capacity         :string
 #  aasm_state       :string
-#  product_offer    :string
-#  featured_product :string
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #  category_id      :integer
 #  subcategory_id   :integer
+#  total_heigth     :integer
+#  total_large      :integer
+#  larger_diameter  :integer
+#  smaller_diameter :integer
+#  hatch_diameter   :integer
+#  applications     :text
+#  materials        :string
+#  total_width      :integer
+#  featured_product :boolean
+#  product_offer    :boolean
 #
 # Indexes
 #
@@ -38,4 +45,7 @@ class Product < ApplicationRecord
   validates :price,presence:true
   validates :description,presence:true
   validates :category_id, presence:true
+  validates :applications, presence: true
+
+  scope :featured_products, -> {where(featured_product: true)}
 end

@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180325035858) do
+ActiveRecord::Schema.define(version: 20180329033743) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "subject"
+    t.text "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,16 +45,23 @@ ActiveRecord::Schema.define(version: 20180325035858) do
     t.string "name"
     t.text "description"
     t.integer "price"
-    t.string "dimensions"
     t.string "weight"
     t.string "capacity"
     t.string "aasm_state"
-    t.string "product_offer"
-    t.string "featured_product"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "category_id"
     t.bigint "subcategory_id"
+    t.integer "total_heigth"
+    t.integer "total_large"
+    t.integer "larger_diameter"
+    t.integer "smaller_diameter"
+    t.integer "hatch_diameter"
+    t.text "applications"
+    t.string "materials"
+    t.integer "total_width"
+    t.boolean "featured_product"
+    t.boolean "product_offer"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["subcategory_id"], name: "index_products_on_subcategory_id"
   end

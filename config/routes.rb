@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :products,only:[:index,:show]
+
   devise_for :users, path_names: { sign_in: 'login'}
   root "main#home"
   get '/about',to: 'main#about'

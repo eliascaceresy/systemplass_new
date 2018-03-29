@@ -18,7 +18,9 @@
               <%=link_to "DETALLES", administration_product_path(product),class:"link-product-add-cart"%>
             </div>
           </div>
-          <span class="product-new-top">New</span>
+          <%if product.product_offer%>
+            <span class="product-new-top">OFERTA!!</span>
+          <%end%>
         </div>
         <div class="item-info-product ">
           <h4>

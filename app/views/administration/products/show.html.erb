@@ -28,6 +28,11 @@
     </div>
     <div class="col-md-8 single-right-left simpleCart_shelfItem">
       <h3><%=@product.name%></h3>
+			<%if @product.product_offer%>
+				<div class="badge badge-primary">
+					OFERTA!!
+				</div>
+			<%end%>
       <p>
         <span class="item_price">$<%=@product.price%></span>
         <!--<del>- $900</del>-->
@@ -82,17 +87,45 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Diemsiones</td>
-                      <td></td>
+										<tr>
+                      <td>Altura Total (mm)</td>
+                      <td><%=@product.total_heigth  || "No Aplica"%></td>
+                    </tr>
+										<tr>
+                      <td>Largo Total (mm)</td>
+                      <td><%=@product.total_large  || "No Aplica"%></td>
+                    </tr>
+										<tr>
+                      <td>Ancho Total (mm)</td>
+                      <td><%=@product.total_width  || "No Aplica"%></td>
+                    </tr>
+										<tr>
+                      <td>Diámetro Mayor (mm)</td>
+                      <td><%=@product.larger_diameter  || "No Aplica"%></td>
+                    </tr>
+										<tr>
+                      <td>Diámetro Menor (mm)</td>
+                      <td><%=@product.smaller_diameter  || "No Aplica"%></td>
+                    </tr>
+										<tr>
+                      <td>Diámetro Escotilla (mm)</td>
+                      <td><%=@product.hatch_diameter  || "No Aplica"%></td>
+                    </tr>
+										<tr>
+                      <td>Material</td>
+                      <td><%=@product.materials  || "No Aplica"%></td>
                     </tr>
                     <tr>
-                      <td>Peso</td>
-                      <td></td>
+                      <td>Peso (Kg.)</td>
+                      <td><%=@product.weight || "No Aplica"%></td>
                     </tr>
                     <tr>
-                      <td>Capacidad</td>
-                      <td></td>
+                      <td>Capacidad (Lts.)</td>
+                      <td><%=@product.capacity || "No Aplica"%></td>
+                    </tr>
+										<tr>
+                      <td>Usos</td>
+                      <td><%=@product.applications || "No Aplica"%></td>
                     </tr>
                   </tbody>
                 </table>
@@ -109,7 +142,7 @@
 <!-- script for responsive tabs -->
 <%=javascript_include_tag "easy-responsive-tabs"%>
 <script>
-  $(document).on('turbolinks:load', function() {
+  $(document).ready(function() {
     $('#horizontalTab').easyResponsiveTabs({
       type: 'default', //Types: default, vertical, accordion
       width: 'auto', //auto or any width like 600px
@@ -134,7 +167,7 @@
 <%=javascript_include_tag "jquery.flexslider"%>
 <script>
   // Can also be used with $(document).ready()
-  $(window).on('turbolinks:load', function() {
+  $(window).load(function() {
     $('.flexslider').flexslider({
       animation: "slide",
       controlNav: "thumbnails"

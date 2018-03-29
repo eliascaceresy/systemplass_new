@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require turbolinks
+//= require easy-responsive-tabs
 //= require_tree .
 //= require_self
 //= require select2-full

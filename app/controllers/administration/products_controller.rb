@@ -55,7 +55,12 @@ class Administration::ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:name,:description,:price,:weight,:dimensions,:capacity,:category_id,:subcategory_id,
+    params.require(:product).permit(
+      :name,:description,:price,:weight,:dimensions,
+      :capacity,:category_id,:subcategory_id,:total_heigth,
+      :total_large,:larger_diameter,:smaller_diameter,
+      :hatch_diameter,:applications,:materials,:featured_product,
+      :product_offer,
     pictures_attributes: [
         :id, :_destroy, :picture_file
     ])

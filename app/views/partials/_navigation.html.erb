@@ -26,28 +26,34 @@
 									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
 										<a href="mens.html"><%=image_tag("top2.jpg")%></a>
 									</div>
+									<%Category.all.order(created_at: :asc).each do |category|%>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="mens.html">Clothing</a></li>
-											<li><a href="mens.html">Wallets</a></li>
-											<li><a href="mens.html">Footwear</a></li>
-											<li><a href="mens.html">Watches</a></li>
-											<li><a href="mens.html">Accessories</a></li>
-											<li><a href="mens.html">Bags</a></li>
-											<li><a href="mens.html">Caps & Hats</a></li>
+
+												<%if category.subcategories.any?%>
+													<li><h5 style="border-bottom:1px solid black;"><%=category.name%></h5></li>
+													<ul class="multi-column-dropdown">
+														<%category.subcategories.each do |sc|%>
+															<li>
+																<%=link_to products_path(category:category.id,subcategory:sc.id) do%>
+																	<%=fa_icon "arrow-right",text: sc.name%>
+																<%end%>
+															</li>
+														<%end%>
+													</ul>
+												<%else%>
+													<li>
+														<h5 style="border-bottom:1px solid black;border-top:1px solid black;">
+															<%=link_to products_path(category:category.id) do%>
+																<%=fa_icon "arrow-right",text:category.name%>
+															<%end%>
+														</h5>
+													</li>
+												<%end%>
+
 										</ul>
 									</div>
-									<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-											<li><a href="mens.html">Jewellery</a></li>
-											<li><a href="mens.html">Sunglasses</a></li>
-											<li><a href="mens.html">Perfumes</a></li>
-											<li><a href="mens.html">Beauty</a></li>
-											<li><a href="mens.html">Shirts</a></li>
-											<li><a href="mens.html">Sunglasses</a></li>
-											<li><a href="mens.html">Swimwear</a></li>
-										</ul>
-									</div>
+									<%end%>
 									<div class="clearfix"></div>
 								</div>
 							</ul>

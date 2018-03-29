@@ -1,0 +1,37 @@
+<%if @products.present?%>
+  <div class="container-fluid" style="min-width: 1000px;margin: 5em;">
+    <%@products.each do |product|%>
+      <div class="col-md-3 product-men">
+        <div class="men-pro-item simpleCart_shelfItem">
+          <div class="men-thumb-item">
+            <%=image_tag(product.pictures.first.picture_file.url(:medium),class:"pro-image-front")%>
+            <%=image_tag(product.pictures.first.picture_file.url(:medium),class:"pro-image-back")%>
+            <div class="men-cart-pro">
+              <div class="inner-men-cart-pro">
+                <%=link_to "DETALLES", product_path(product),class:"link-product-add-cart"%>
+              </div>
+            </div>
+            <%if product.product_offer%>
+              <span class="product-new-top">OFERTA!!</span>
+            <%end%>
+          </div>
+          <div class="item-info-product ">
+            <h4>
+              <%=link_to product.name, product_path(product)%>
+            </h4>
+            <div class="info-product-price">
+              <span class="item_price">$<%=product.price%></span>
+              <!--<del>$69.71</del>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    <%end%>
+  </div>
+<%else%>
+  <div class="container-fluid text-center" style="min-width: 1000px;margin: 5em;">
+    <h1>Ohps! Lo Sentimos</h1>
+    <h3>Aún no tenemos productos para esta categoría.</h3>
+    <h3>Te invitamos a revisar los demás productos.</h3>
+  </div>
+<%end%>
