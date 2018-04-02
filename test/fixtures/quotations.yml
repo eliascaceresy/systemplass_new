@@ -1,12 +1,12 @@
 # == Schema Information
 #
-# Table name: contacts
+# Table name: quotations
 #
 #  id         :integer          not null, primary key
 #  name       :string
 #  email      :string
 #  subject    :string
-#  message    :text
+#  message    :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -17,10 +17,10 @@ one:
   name: MyString
   email: MyString
   subject: MyString
-  message: MyText
+  message: MyString
 
 two:
   name: MyString
   email: MyString
   subject: MyString
-  message: MyText
+  message: MyString

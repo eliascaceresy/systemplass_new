@@ -1,0 +1,24 @@
+.container-fluid.mt-2
+  .row
+    .col-md-12.col-lg-12
+      .panel.panel-default
+        .panel-heading.css-treeview
+          h4=fa_icon "envelope",text:"Listado de Emails recibidos"
+        .panel-body
+          .table-responisve
+            table.table.table-hover
+              thead
+                tr
+                  th #
+                  th Nombre Persona
+                  th Fecha de Recepción
+                  th Acciones
+              tbody
+                -@quotations.each_with_index do |quotation,index|
+                  tr
+                    td= index+1
+                    td= quotation.name
+                    td= quotation.created_at.strftime("%d-%m-%Y")
+                    td
+                      = link_to administration_quotation_path(quotation),class:"btn btn-sm btn-primary" do
+                        = fa_icon "eye",text:"Ver"

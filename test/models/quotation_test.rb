@@ -1,19 +1,19 @@
 # == Schema Information
 #
-# Table name: contacts
+# Table name: quotations
 #
 #  id         :integer          not null, primary key
 #  name       :string
 #  email      :string
 #  subject    :string
-#  message    :text
+#  message    :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class ContactTest < ActiveSupport::TestCase
+class QuotationTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

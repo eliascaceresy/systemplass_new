@@ -1,0 +1,22 @@
+.container
+  .row
+    .panel.panel-default
+      .panel-heading
+        |Nombre:
+        = " " + @quotation.name
+        br
+        br
+        |Email:
+        = " " + @quotation.email
+        br
+        br
+        |Asunto:
+        = " " + @quotation.subject
+      .panel-body
+        | Mensaje:
+        br
+        br
+        = @quotation.message
+      .panel-footer
+        =link_to administration_quotations_path, class: "btn btn-primary" do
+          =fa_icon "arrow-left",text: "Volver"

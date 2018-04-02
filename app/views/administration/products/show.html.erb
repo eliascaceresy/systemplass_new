@@ -79,15 +79,15 @@
             <div class="single_page_agile_its_w3ls">
               <h6><%=@product.name%></h6>
               <div class="table-responsive">
-                <table class="table table-striped">
+								<table class="table table-striped">
                   <thead>
                     <tr class="bg-green">
-                      <th>FICHA TÉCNICA</th>
+                      <th class="white-text">FICHA TÉCNICA</th>
                       <th></th>
                     </tr>
                   </thead>
                   <tbody>
-										<tr>
+                    <tr>
                       <td>Altura Total (mm)</td>
                       <td><%=@product.total_heigth  || "No Aplica"%></td>
                     </tr>
@@ -128,7 +128,7 @@
                       <td><%=@product.applications || "No Aplica"%></td>
                     </tr>
                   </tbody>
-                </table>
+								</table>
               </div>
             </div>
           </div>

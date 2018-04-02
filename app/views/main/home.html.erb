@@ -16,7 +16,7 @@
 				          <%=image_tag(product.pictures.first.picture_file.url(:medium),class:"pro-image-back")%>
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-				              <%=link_to "DETALLES", administration_product_path(product),class:"link-product-add-cart"%>
+				              <%=link_to "DETALLES", product_path(product),class:"link-product-add-cart"%>
 				            </div>
 									</div>
 									<%if product.product_offer%>

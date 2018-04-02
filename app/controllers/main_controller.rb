@@ -1,6 +1,6 @@
 class MainController < ApplicationController
   def home
-    @products = Product.featured_products.order(created_at: :asc)
+    @products = Product.featured_products.order(created_at: :asc).last(8)
   end
 
   def about
@@ -12,6 +12,6 @@ class MainController < ApplicationController
   end
 
   def contact
-
+    @quotation = Quotation.new
   end
 end

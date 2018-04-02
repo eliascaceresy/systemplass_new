@@ -1,0 +1,25 @@
+<%= simple_form_for(@quotation) do |f| %>
+  <div class="styled-input agile-styled-input-top">
+    <input type="text" name="quotation[name]" required>
+    <label>Nombre</label>
+    <span></span>
+  </div>
+  <div class="styled-input">
+    <input type="email" name="quotation[email]" required>
+    <label>Email</label>
+    <span></span>
+  </div>
+  <div class="styled-input">
+    <input type="text" name="quotation[subject]" required>
+    <label>Asunto</label>
+    <span></span>
+  </div>
+  <div class="styled-input">
+    <textarea name="quotation[message]" required></textarea>
+    <label>Mensaje</label>
+    <span></span>
+  </div>
+  <div class="form-actions">
+    <input type="submit" value="ENVIAR">
+  </div>
+<% end %>

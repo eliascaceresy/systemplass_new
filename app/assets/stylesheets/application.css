@@ -22,6 +22,31 @@
      padding: 30px 30px;
  }
 
+ .btn-system {
+    border: none;
+    padding: 10px 40px 10px;
+    font-size: 14px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: #111;
+    color: white !important;
+}
+
+.btn-system:hover {
+    background: red;
+}
+
+ .btn{
+   color: white !important;
+ }
+
+ .css-treeview a:hover{
+   background-color: inherit;
+   color: black;
+ }
+
  .w-45{
    width: 45%;
  }
@@ -46,6 +71,7 @@
 
 ul.multi-column-dropdown li a:hover {
     color: #1a9539;
+    background-color: inherit;
 }
 
 .css-treeview h4, .community-poll h4 {
@@ -58,6 +84,10 @@ ul.multi-column-dropdown li a:hover {
     border-bottom: 1px solid #d2d2d2;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+.carousel.slide a{
+  background-color: inherit;
 }
 
 .single-right-left h3 {
