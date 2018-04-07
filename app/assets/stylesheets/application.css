@@ -15,6 +15,7 @@
  *=require select2
  *=require select2-bootstrap
  *= require_self
+
  */
 
  .dropdown-menu.admin.columns-3 {
@@ -22,6 +23,10 @@
      padding: 30px 30px;
  }
 
+ .navbar-default {
+     background-color: #5a0808;
+     border-color: #5a0808;
+ }
  .btn-system {
     border: none;
     padding: 10px 40px 10px;

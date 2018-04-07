@@ -10,6 +10,10 @@
         = " " + @quotation.email
         br
         br
+        |Teléfono:
+        = " " + @quotation.phone_number unless @quotation.phone_number.nil?
+        br
+        br
         |Asunto:
         = " " + @quotation.subject
       .panel-body

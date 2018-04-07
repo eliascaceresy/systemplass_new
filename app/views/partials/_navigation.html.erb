@@ -1,4 +1,4 @@
-<div class="ban-top" style="text-align:center;">
+<div class="ban-top" style="text-align:center;background-color:#5a0808">
 	<div class="container">
 		<div class="top_nav_left">
 			<nav class="navbar navbar-default">
@@ -24,7 +24,9 @@
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="agile_inner_drop_nav_info">
 									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-										<a href="mens.html"><%=image_tag("top2.jpg")%></a>
+										<%=link_to products_path do%>
+											<%=image_tag("logo-menu-prod.png")%>
+										<%end%>
 									</div>
 									<%Category.all.order(created_at: :asc).each do |category|%>
 									<div class="col-sm-3 multi-gd-img">

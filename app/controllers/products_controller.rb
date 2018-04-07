@@ -8,6 +8,8 @@ class ProductsController < ApplicationController
     elsif params[:category].present?
       category = Category.find(params[:category])
       @products = Product.where(category:category)
+    else
+      @products = Product.all
     end
   end
 

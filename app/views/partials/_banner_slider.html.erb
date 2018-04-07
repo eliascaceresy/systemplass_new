@@ -1,75 +1,39 @@
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-    <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-  </ol>
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <div class="container">
-        <div class="carousel-caption">
-          <h3>The Biggest
-            <span>Sale</span>
-          </h3>
-          <p>Special for today</p>
-
+<div id="hero-slider">
+  <div class="hero-slide banner-slide">
+    <div class="container-fluid" style="min-height: 550px;">
+      <div class="row hero-content text-center">
+        <div class="col-xs-6 col-sm-3 col-md-3">
+          <%=image_tag("b1.jpg",class:"img-fluid slide-message", "data-animation" => "fadeInLeftBig", "data-delay" => "0.4s")%>
         </div>
+        <div class="col-xs-6 col-sm-3 col-md-3">
+          <%=image_tag("b2.jpg",class:"img-fluid slide-message", "data-animation" => "fadeInUpBig", "data-delay" => "0.6s")%>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-3">
+          <%=image_tag("b3.jpg",class:"img-fluid slide-message", "data-animation" => "fadeInUpBig", "data-delay" => "0.7s")%>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-3">
+          <%=image_tag("b4.jpg",class:"img-fluid slide-message", "data-animation" => "fadeInRightBig", "data-delay" => "0.9s")%>
+        </div>
+        <h3 class="slider-h" data-animation="lightSpeedIn" data-delay="0.1s" style="color:white;"><strong>ESTE ES UN TEXTO PARA QUE SE MUESTRE CON LAS IMÁGENES</strong></h3>
       </div>
     </div>
-    <div class="item item2">
-      <div class="container">
-        <div class="carousel-caption">
-          <h3>Summer
-            <span>Collection</span>
-          </h3>
-          <p>New Arrivals On Sale</p>
-
-        </div>
-      </div>
-    </div>
-    <div class="item item3">
-      <div class="container">
-        <div class="carousel-caption">
-          <h3>The Biggest
-            <span>Sale</span>
-          </h3>
-          <p>Special for today</p>
-
-        </div>
-      </div>
-    </div>
-    <!--<div class="item item4">
-      <div class="container">
-        <div class="carousel-caption">
-          <h3>Summer
-            <span>Collection</span>
-          </h3>
-          <p>New Arrivals On Sale</p>
-
-        </div>
-      </div>
-    </div>
-    <div class="item item5">
-      <div class="container">
-        <div class="carousel-caption">
-          <h3>The Biggest
-            <span>Sale</span>
-          </h3>
-          <p>Special for today</p>
-
-        </div>
-      </div>
-    </div>-->
   </div>
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    
-    <span class="sr-only">Next</span>
-  </a>
-  <!-- The Modal -->
+  <div class="hero-slide banner-slide">
+    <div class="container" style="min-height: 550px;">
+      <div class="row hero-content text-center">
+        <div class="col-xs-6 col-sm-3 col-md-3">
+          <%=image_tag("b1.jpg",class:"img-fluid slide-message", "data-animation" => "fadeInUpBig", "data-delay" => "0.1s")%>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-3">
+          <%=image_tag("b2.jpg",class:"img-fluid slide-message", "data-animation" => "fadeInUpBig", "data-delay" => "0.5s")%>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-3">
+          <%=image_tag("b3.jpg",class:"img-fluid slide-message", "data-animation" => "fadeInUpBig", "data-delay" => "0.9s")%>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-3">
+          <%=image_tag("b4.jpg",class:"img-fluid slide-message", "data-animation" => "fadeInUpBig", "data-delay" => "1.3s")%>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- //banner -->

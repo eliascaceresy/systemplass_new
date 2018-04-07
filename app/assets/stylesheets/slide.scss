@@ -1,0 +1,55 @@
+.slick-prev {
+  left: 5px;
+  z-index: 9999;
+}
+
+.slick-next {
+  right: 5px;
+}
+
+.slick-dots {
+  bottom: -10px;
+}
+
+.banner-slide{
+  background-image: image-url("banner1.jpg");
+}
+
+.hero-slide {
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.slider-h, .slider-h-small {
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.72);
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-content {
+  height: 400px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.slide-message {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .hero-content {
+    height: 500px;
+  }
+}
+
+.ls-slide, .ls-layer {
+    position: absolute;
+    display: none;
+    background-position: center center;
+    overflow: hidden;
+}
