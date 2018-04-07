@@ -2,7 +2,7 @@ class Administration::QuotationsController < ApplicationController
   before_action :set_quotation,only:[:show]
 
   def index
-    @quotations = Quotation.all.order(created_at: :asc)
+    @quotations = Quotation.all.order(created_at: :desc).page params[:page]
     render layout: "administration"
   end
 

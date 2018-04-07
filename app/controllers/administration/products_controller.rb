@@ -2,7 +2,7 @@ class Administration::ProductsController < ApplicationController
   before_action :set_product,only:[:edit,:update,:destroy,:show]
 
   def index
-    @products = Product.all.order(created_at: :asc)
+    @products = Product.all.order(created_at: :asc).page params[:page]
     render layout: "administration"
   end
 

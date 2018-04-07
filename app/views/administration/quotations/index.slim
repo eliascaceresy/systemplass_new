@@ -4,6 +4,7 @@
       .panel.panel-default
         .panel-heading.css-treeview
           h4=fa_icon "envelope",text:"Listado de Emails recibidos"
+          = page_entries_info @quotations, entry_name: 'Email'
         .panel-body
           .table-responisve
             table.table.table-hover
@@ -22,3 +23,5 @@
                     td
                       = link_to administration_quotation_path(quotation),class:"btn btn-sm btn-primary" do
                         = fa_icon "eye",text:"Ver"
+        .text-center
+          = paginate @quotations

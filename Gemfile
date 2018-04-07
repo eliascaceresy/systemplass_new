@@ -43,6 +43,9 @@ gem "annotate"
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'select2-rails', github: 'argerim/select2-rails'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
+gem 'kaminari-i18n'
 #################
 
 group :development, :test do
