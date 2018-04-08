@@ -18,7 +18,7 @@
             <%@product.pictures.each_with_index do |picture,index|%>
               <li data-thumb="<%=asset_path(picture.picture_file.url(:thumb))%>">
                 <div class="thumb-image">
-                  <%=image_tag(picture.picture_file.url(:medium),class:"img-responsive","data-imagezoom" => "true")%>
+                  <%=image_tag(picture.picture_file.url,class:"img-responsive","data-imagezoom" => true)%>
                 </div>
               </li>
             <%end%>
@@ -131,9 +131,10 @@
   </div>
 </div>
 
-
+<%=javascript_include_tag "imagezoom"%>
 <!-- script for responsive tabs -->
 <%=javascript_include_tag "easy-responsive-tabs"%>
+
 <script>
   $(document).ready(function() {
     $('#horizontalTab').easyResponsiveTabs({

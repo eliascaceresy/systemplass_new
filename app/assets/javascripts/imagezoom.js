@@ -116,7 +116,7 @@
     }
   }
 
-  $( document ).on('turbolinks:load', function() {
+  $(document).ready(function() {
     $('[data-imagezoom]').imageZoom();
   });
 })(jQuery);
