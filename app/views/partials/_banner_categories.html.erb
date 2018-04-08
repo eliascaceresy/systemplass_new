@@ -1,49 +1,26 @@
-<div class="banner-bootom-w3-agileits">
-  <div class="container">
-    <h3 class="wthree_text_info">Nuestros
-      <span>Productos</span>
-    </h3>
-
-    <div class="col-md-5 bb-grids bb-left-agileits-w3layouts">
-      <a href="womens.html">
-        <div class="bb-left-agileits-w3layouts-inner grid">
-          <figure class="effect-roxy">
-            <%=image_tag("bb1.jpg",class:"img-responsive")%>
-            <figcaption>
-              <h3>
-                <span>T</span>AMBORES
-              </h3>
-            </figcaption>
-          </figure>
+<div class="container-fluid">
+  <div class="banner-bootom-w3-agileits">
+    <div class="container">
+      <h3 class="wthree_text_info">Nuestros
+        <span>Productos</span>
+      </h3>
+      <%@categories.each do |category|%>
+        <div class="col-md-6 bb-grids bb-middle-agileits-w3layouts" style="margin-bottom:1em;">
+          <%=link_to products_path(category:category.id) do%>
+            <div class="bb-middle-agileits-w3layouts grid">
+              <figure class="effect-roxy">
+                <%=image_tag(category.portada.url(:medium),class:"img-responsive")%>
+                <figcaption>
+                  <h3>
+                    <span><%=category.name[0]%></span><%=category.name[1..20]%>
+                  </h3>
+                </figcaption>
+              </figure>
+            </div>
+          <%end%>
+          <div class="clearfix"></div>
         </div>
-      </a>
-    </div>
-    <div class="col-md-7 bb-grids bb-middle-agileits-w3layouts">
-      <a href="mens.html">
-        <div class="bb-middle-agileits-w3layouts grid">
-          <figure class="effect-roxy">
-            <%=image_tag("bottom3.jpg",class:"img-responsive")%>
-            <figcaption>
-              <h3>
-                <span>M</span>OTORES
-              </h3>
-            </figcaption>
-          </figure>
-        </div>
-      </a>
-      <a href="mens.html">
-        <div class="bb-middle-agileits-w3layouts forth grid">
-          <figure class="effect-roxy">
-            <%=image_tag("bottom4.jpg",class:"img-responsive")%>
-            <figcaption>
-              <h3>
-                <span>F</span>IERROS
-              </h3>
-            </figcaption>
-          </figure>
-        </div>
-      </a>
-      <div class="clearfix"></div>
+      <%end%>
     </div>
   </div>
 </div>

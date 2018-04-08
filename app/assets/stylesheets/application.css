@@ -23,6 +23,10 @@
      padding: 30px 30px;
  }
 
+ .slider-h{
+   color: #5a0808;
+ }
+
  .navbar-default {
      background-color: #5a0808;
      border-color: #5a0808;
@@ -111,6 +115,10 @@ ul.multi-column-dropdown li a:hover {
 
 .white-text{
   color:white !important;
+}
+
+.text-left{
+  text-align: left;
 }
 
 .resp-tab-active {

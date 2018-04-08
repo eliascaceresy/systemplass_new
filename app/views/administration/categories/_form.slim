@@ -5,6 +5,13 @@
         h4=fa_icon "sitemap",text:"Categoría"
       .panel-body
         = f.input :name,label: "Nombre"
+        .row.text-left
+          .col-md-3 style="margin-left:18%;"
+            =f.label :portada
+          .col-md-4.text-center
+            -if @category.persisted?
+              =image_tag(@category.portada.url(:medium),class:"img-responsive")
+            = f.input :portada, :label => false,as: :file, class: 'form-control',required:true
         =link_to_add_association f, :subcategories, class: 'add-association btn btn-success btn-sm', id: 'boton_add_subcategory', data: {"association-insertion-node" => "div.subcategories", "association-insertion-method" => "append"} do
           = fa_icon 'plus', text: "Agregar Subcategoría"
         .row
