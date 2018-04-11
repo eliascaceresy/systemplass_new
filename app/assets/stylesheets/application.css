@@ -23,9 +23,17 @@
      padding: 30px 30px;
  }
 
+ .middle {
+   vertical-align: middle !important;
+ }
+
  .slider-h{
    color: #5a0808;
  }
+
+ .shadow {
+    box-shadow: 0px 0px 15px 0px #D6D6D6;
+}
 
  .navbar-default {
      background-color: #5a0808;
