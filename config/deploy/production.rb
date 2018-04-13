@@ -10,7 +10,7 @@ set :nginx_port, 80
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
-server '45.7.228.65', user: "#{fetch(:user)}", roles: %w{app db web}, primary: true
+server '45.7.228.65:22222', user: "#{fetch(:user)}", roles: %w{app db web}, primary: true
 
 # role-based syntax
 # ==================
