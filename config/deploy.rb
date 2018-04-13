@@ -1,4 +1,4 @@
-set :repo_url, 'git@github.com:eliascaceresy/systemplas.git'
+set :repo_url, 'git@github.com:eliascaceresy/systemplass_new.git'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 set :user, 'deployer'
