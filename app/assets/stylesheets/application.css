@@ -213,3 +213,48 @@ ul.multi-column-dropdown li a:hover {
       border-bottom: 9px solid #1a9539;
   }
 }
+
+@media (min-width: 990px){
+  .a1{
+    width:20%;
+    margin-left:80%;
+    margin-top: 10%;
+  }
+  .a2{
+    width:15%;
+    margin:0 auto;
+    margin-left:90%;
+    margin-top: -10%;
+  }
+  .a3{
+    width:20%;
+    margin-left:60%;
+    margin-top: -30%;
+  }
+  .f1{
+    width:150%;
+    margin:0 auto;
+  }
+}
+
+@media (max-width: 989px){
+  .a1{
+    width:20%;
+    margin-left:70%;
+    margin-top: 20%;
+  }
+  .a2{
+    width:20%;
+    margin:0 auto;
+    margin-left:80%;
+    margin-top: -10%;
+  }
+  .a3{
+    width:20%;
+    margin-left:50%;
+    margin-top: -40%;
+  }
+  .f1{
+    width:60%;
+  }
+}
