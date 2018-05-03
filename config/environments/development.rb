@@ -38,19 +38,18 @@ Rails.application.configure do
   config.active_record.migration_error = :page_load
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-   :address              => "smtp.gmail.com",
-   :port                 => 587,
-   :user_name            => "elias.jcy@gmail.com",
-   :password             => "elias16071991",
+   :address              => "mail.systemplas.cl",
+   :port                 => 26,
+   :user_name            => "contacto@systemplas.cl",
+   :password             => "contac20182018",
    :authentication       => "plain",
-   :domain               => 'gmail.com',
-   :enable_starttls_auto => true
+   :domain               => 'systemplas.cl',
+   :enable_starttls_auto => false
   }
 
   # Debug mode disables concatenation and preprocessing of assets.

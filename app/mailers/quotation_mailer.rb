@@ -2,13 +2,13 @@ class QuotationMailer < ApplicationMailer
 
   def notify_to_systemplas(quotation)
     @from    = quotation.email
-    @to      = "elias.jcy@gmail.com"
+    @to      = "ventas@systemplas.cl"
     @quotation = quotation
     mail(from: @from, to: @to, subject: "#{quotation.subject}")
   end
 
   def notify_to_client(quotation)
-    @from    = "elias.jcy@gmail.com"
+    @from    = "ventas@systemplas.cl"
     @to      = quotation.email
     @quotation = quotation
     mail(from: @from, to: @to, subject: "Copia consulta Systemplas")
