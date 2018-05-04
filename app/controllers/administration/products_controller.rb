@@ -1,4 +1,4 @@
-class Administration::ProductsController < ApplicationController
+class Administration::ProductsController < AdminController
   before_action :set_product,only:[:edit,:update,:destroy,:show]
 
   def index

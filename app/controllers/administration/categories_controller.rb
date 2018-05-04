@@ -1,4 +1,4 @@
-class Administration::CategoriesController < ApplicationController
+class Administration::CategoriesController < AdminController
   before_action :set_category,only:[:edit,:update]
 
   def index

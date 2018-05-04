@@ -1,4 +1,4 @@
-class Administration::QuotationsController < ApplicationController
+class Administration::QuotationsController < AdminController
   before_action :set_quotation,only:[:show]
 
   def index
