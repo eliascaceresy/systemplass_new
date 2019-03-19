@@ -18,21 +18,34 @@
   </head>
 
   <body>
-    <%=render "partials/header"%>
-    <%=render "partials/header_bot"%>
-    <%=render "partials/navigation"%>
+
     <div id="div_alertas">
-      <%flash.each do |type,content|%>
-        <%if content.respond_to?('each')%>
-          <%content.each do |item|%>
-            <%=render "partials/alert",type:type,content:content%>
-          <%end%>
-        <%else%>
-          <%=render "partials/alert",type:type,content:content%>
-        <%end%>
-      <%end%>
+    <div class="container text-justify" style="margin-top: 3em;">
+      <p>
+        ESTIMADOS CLIENTES:
+        <br/>
+        <br/>
+        MEDIANTE EL PRESENTE COMUNICADO, INFORMAMOS A NUESTRA DISTINGUIDA, LA DECISIÓN DEL CAMBIO DE DIRECCIÓN DE NUESTRO SITIO WEB A PARTIR DE 18 DE MARZO DEL 2019, DE MANERA DE PODER MANTENERLOS AL TANTO DE NUESTRAS OFERTAS Y NUEVOS PRODUCTOS.
+        <br/>
+        <br/>
+        NOS HEMOS VISTO EN LA OBLIGACIÓN DE TENER QUE MIGRAR NUESTRO WEB SITE, ANTE LA NOTICIA RECIBIDA ESTA SEMANA, DEL REGISTRO DE NUESTRA MARCA, POR PARTE DE OTRA EMPRESA DE LA COMPETENCIA.
+        <br/>
+        <br/>
+        AL RESPECTO DEBEMOS SEÑALAR QUE SOMOS UNA EMPRESA QUE BASA SU PRESTIGIO Y CALIDAD DE SUS PRODUCTOS EN LA FABRICACIÓN CON MATERIALES DE CALIDAD, ES ASÍ COMO NOS HAN PREFERIDO NUESTROS CLIENTES MAS ALLÁ DE NUESTRO NOMBRE COMO EMPRESA.
+        <br/>
+        <br/>
+        LA EMPRESA INFORMA ADEMAS QUE LOS CANALES DE COMUNICACIÓN CON SU CLIENTELA SON:
+        <br/>
+        <br/>
+        <ul>
+          <li>+56 9 9787 7802 MARIA TERESA</li>
+          <li>+56 9 5995 2639 MIGUEL GODOY</li>
+          <li>+56 9 4628 2163 ELIAS BASUALTO</li>
+        </ul>
+        <br/>
+        <br/>
+        AGRADECEMOS SU PREFERENCIA.
+      </p>
     </div>
-    <%= yield %>
-    <%=render "partials/footer"%>
   </body>
 </html>

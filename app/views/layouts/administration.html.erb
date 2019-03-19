@@ -10,30 +10,6 @@
     <%= javascript_include_tag 'application'%>
   </head>
   <body>
-    <%=render "partials/header"%>
-    <%=render "partials/header_bot"%>
-    <%=render "partials/navigation"%>
-    <div id="div_alertas">
-      <%flash.each do |type,content|%>
-        <%if content.respond_to?('each')%>
-          <%content.each do |item|%>
-            <%=render "partials/alert",type:type,content:content%>
-          <%end%>
-        <%else%>
-          <%=render "partials/alert",type:type,content:content%>
-        <%end%>
-      <%end%>
-    </div>
-    <div class="container-fluid p-3em">
-      <div class="row">
-        <div class="col-sm-12 col-md-4 col-lg-3">
-          <%=render "partials/menu_lateral"%>
-        </div>
-        <div class="col-sm-12 col-md-8 col-lg-9">
-          <%= yield %>
-        </div>
-      </div>
-    </div>
-    <%=render "partials/footer"%>
+    
   </body>
 </html>
